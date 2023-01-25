@@ -3,7 +3,7 @@ Project for intro to software engineering
 
 Members:
 Kyle Thompson - frontend
- - frontend
+Diana Ciuculin - frontend
 Jose Zea - backend
 Matthew Schauers - backend
 
