@@ -7,4 +7,4 @@ Kyle Thompson - frontend | Diana Ciuculin - frontend | Jose Zea - backend | Matt
 
 Description: 
 
-VReference is a website which will allow the user to compare a variety of stats across a range of headsets to enable them to make an informed decision when buying a new headset
+VReference is a website which will allow the user to compare a variety of stats across a range of virtual reality headsets to enable them to make an informed decision when buying a new headset
