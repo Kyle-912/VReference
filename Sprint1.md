@@ -1,4 +1,5 @@
 User stories:
+
 As a VR enthusiast I would like to visually see the different kinds of VR/AR headsets that are available.
 
 As a VR enthusiast I would like to be able to look at pictures of the different types of headsets.
