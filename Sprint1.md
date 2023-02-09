@@ -7,9 +7,10 @@ As a frugal shopper I would like to be able to compare prices between headsets, 
 As a shopper I would like to be able to click a link to take me to directly buy the headset of my choice
 
 What issues your team planned to address:
-
+Getting organized and starting the project
 
 Which ones were successfully completed:
-
+None
 
 Which ones didn't and why:
+All, I was unable to make contact with my team
