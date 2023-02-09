@@ -35,7 +35,7 @@ func CreateHeadset(db *gorm.DB, w http.ResponseWriter, r *http.Request) {
 func GetHeadset(db *gorm.DB, w http.ResponseWriter, r *http.Request) {
 	vars := mux.Vars(r)
 
-	name := vars["name"]
+	name := vars["title"]
 	headset := getHeadsetOr404(db, name, w, r)
 	if headset == nil {
 		return
@@ -46,7 +46,7 @@ func GetHeadset(db *gorm.DB, w http.ResponseWriter, r *http.Request) {
 func UpdateHeadset(db *gorm.DB, w http.ResponseWriter, r *http.Request) {
 	vars := mux.Vars(r)
 
-	name := vars["name"]
+	name := vars["title"]
 	headset := getHeadsetOr404(db, name, w, r)
 	if headset == nil {
 		return
@@ -69,12 +69,12 @@ func UpdateHeadset(db *gorm.DB, w http.ResponseWriter, r *http.Request) {
 func DeleteHeadset(db *gorm.DB, w http.ResponseWriter, r *http.Request) {
 	vars := mux.Vars(r)
 
-	name := vars["name"]
+	name := vars["title"]
 	headset := getHeadsetOr404(db, name, w, r)
 	if headset == nil {
 		return
 	}
-	if err := db.Delete(&headset).Error; err != nil {
+	if err := db.Unscoped().Delete(&headset).Error; err != nil {
 		respondError(w, http.StatusInternalServerError, err.Error())
 		return
 	}
@@ -84,7 +84,7 @@ func DeleteHeadset(db *gorm.DB, w http.ResponseWriter, r *http.Request) {
 func DisableHeadset(db *gorm.DB, w http.ResponseWriter, r *http.Request) {
 	vars := mux.Vars(r)
 
-	name := vars["name"]
+	name := vars["title"]
 	headset := getHeadsetOr404(db, name, w, r)
 	if headset == nil {
 		return
@@ -100,7 +100,7 @@ func DisableHeadset(db *gorm.DB, w http.ResponseWriter, r *http.Request) {
 func EnableHeadset(db *gorm.DB, w http.ResponseWriter, r *http.Request) {
 	vars := mux.Vars(r)
 
-	name := vars["name"]
+	name := vars["title"]
 	headset := getHeadsetOr404(db, name, w, r)
 	if headset == nil {
 		return
@@ -116,7 +116,8 @@ func EnableHeadset(db *gorm.DB, w http.ResponseWriter, r *http.Request) {
 
 func getHeadsetOr404(db *gorm.DB, name string, w http.ResponseWriter, r *http.Request) *model.Headset {
 	headset := model.Headset{}
-	if err := db.First(&headset, model.Headset{Name: name}).Error; err != nil {
+	otherset := model.Headset{Name: name}
+	if err := db.Where(otherset).First(&headset).Error; err != nil {
 		respondError(w, http.StatusNotFound, err.Error())
 		return nil
 	}
