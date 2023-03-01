@@ -27,6 +27,7 @@ Server: localhost:3000
           "name": "OculusRift",
           "price": 120,
           "wireless": true,
+          "rating": 5,
           "description": "Description here",
           "status": false
         },
@@ -38,6 +39,7 @@ Server: localhost:3000
           "name": "Steam VR",
           "price": 200,
           "wireless": false,
+          "rating": 4,
           "description": "Description here",
           "status": false
         }
@@ -58,6 +60,7 @@ Server: localhost:3000
           "name": "OculusRift",
           "price": 120,
           "wireless": true,
+          "rating": 5,
           "description": "Description here",
           "status": false
         }
@@ -72,6 +75,7 @@ Server: localhost:3000
       name(string): Name of the headset
       price(int): How much the headset costs
       wireless(boolean): If the headset is wireless or not
+      rating(int): 1 to 5 star rating of headset
       description(string): Description of the headset
       status(boolean): Is the headset available
     
@@ -90,6 +94,7 @@ Server: localhost:3000
       name(string): Name of the headset
       price(int): How much the headset costs
       wireless(boolean): If the headset is wireless or not
+      rating(int): 1 to 5 star rating of headset
       description(string): Description of the headset
 
     Response:
@@ -97,6 +102,41 @@ Server: localhost:3000
       {
         "message": "Successfully updated headset!"
       }
+
+- PUT /headsets/{name}/enable
+    
+    Changes headsets status to true
+    
+    Response:
+
+      {
+        "message": "Successfully enabled headset!"
+      }
+
+- PUT /headsets/{name}/disable
+    
+    Changes headsets status to false
+    
+    Response:
+
+      {
+        "message": "Successfully disabled headset!"
+      }
+
+- DELETE /headsets/{name}
+  
+    Deletes an existing headset
+    
+    Response:
+
+      {
+        "message": "Successfully deleted headset!"
+      }
+
+
+      
+    
+    
 
     
       
