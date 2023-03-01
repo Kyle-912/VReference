@@ -11,6 +11,7 @@ type Headset struct {
 	Name string `gorm:"unique" json:"name"`
 	Price int `json:"price"`
 	Wireless bool `json:"wireless"`
+	Rating int `json:"rating"`
 	Description string `json:"description"`
 	Status bool `json:"status"`
 }
