@@ -1,3 +1,15 @@
+Detail work you've completed in Sprint 2:
+Basic website layout
+backend functionality
+cypress test
+passing of headset list from frontend to backend
+
+List unit tests and Cypress test for frontend:
+cypress - select first box under filters
+
+List unit tests for backend:
+
+
 **--API Documentation--**
 
 Server: localhost:3000
