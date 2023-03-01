@@ -29,7 +29,7 @@ func CreateHeadset(db *gorm.DB, w http.ResponseWriter, r *http.Request) {
 		respondError(w, http.StatusInternalServerError, err.Error())
 		return
 	}
-	respondJSON(w, http.StatusCreated, headset)
+	respondMessage(w, http.StatusCreated, "Successfully added headset!")
 }
 
 func GetHeadset(db *gorm.DB, w http.ResponseWriter, r *http.Request) {
@@ -63,7 +63,7 @@ func UpdateHeadset(db *gorm.DB, w http.ResponseWriter, r *http.Request) {
 		respondError(w, http.StatusInternalServerError, err.Error())
 		return
 	}
-	respondJSON(w, http.StatusOK, headset)
+	respondMessage(w, http.StatusCreated, "Successfully updated headset!")
 }
 
 func DeleteHeadset(db *gorm.DB, w http.ResponseWriter, r *http.Request) {
@@ -78,7 +78,7 @@ func DeleteHeadset(db *gorm.DB, w http.ResponseWriter, r *http.Request) {
 		respondError(w, http.StatusInternalServerError, err.Error())
 		return
 	}
-	respondJSON(w, http.StatusNoContent, nil)
+	respondMessage(w, http.StatusCreated, "Successfully deleted headset!")
 }
 
 func DisableHeadset(db *gorm.DB, w http.ResponseWriter, r *http.Request) {
@@ -94,7 +94,7 @@ func DisableHeadset(db *gorm.DB, w http.ResponseWriter, r *http.Request) {
 		respondError(w, http.StatusInternalServerError, err.Error())
 		return
 	}
-	respondJSON(w, http.StatusOK, headset)
+	respondMessage(w, http.StatusCreated, "Successfully disabled headset!")
 }
 
 func EnableHeadset(db *gorm.DB, w http.ResponseWriter, r *http.Request) {
@@ -110,7 +110,7 @@ func EnableHeadset(db *gorm.DB, w http.ResponseWriter, r *http.Request) {
 		respondError(w, http.StatusInternalServerError, err.Error())
 		return
 	}
-	respondJSON(w, http.StatusOK, headset)
+	respondMessage(w, http.StatusCreated, "Successfully enabled headset!")
 }
 
 
