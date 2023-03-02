@@ -1,5 +1,6 @@
 {
   "devDependencies": {
+    "@angular/cli": "^15.2.1",
     "cypress": "^12.7.0"
   }
 }
