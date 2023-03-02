@@ -1,11 +1,11 @@
 Detail work you've completed in Sprint 2:
-Basic website layout
-backend functionality
-cypress test
-passing of headset list from frontend to backend
+-basic website layout
+-backend functionality
+-cypress test
+-passing of headset list from frontend to backend
 
 List unit tests and Cypress test for frontend:
-cypress - select first box under filters
+-cypress - select all boxes under filters
 
 List unit tests for backend:
 
