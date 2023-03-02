@@ -8,6 +8,7 @@ List unit tests and Cypress test for frontend:
 -cypress - select all boxes under filters
 
 List unit tests for backend:
+postman - tested each API request
 
 
 **--API Documentation--**
